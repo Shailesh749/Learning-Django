@@ -20,13 +20,18 @@ from simpleproject import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homePage), 
-    path('about/', views.about), 
+    path('', views.homePage,name='home'), 
+    path('about/', views.about, name='about'), 
     # path('course/', views.course), 
     # path('course/<int:courseid>', views.courseDetails), 
     # path('course/<str:courseid>', views.courseDetails), 
     # path('course/<slug:courseid>', views.courseDetails), 
     # without type using
     # path('course/<courseid>', views.courseDetails), 
-    path('contact/', views.contact), 
+    path('contact/', views.contact, name='contact'), 
+    path('userform/', views.userForm, name='userform'), 
+    path('submitform/', views.submitform, name='submitform'), 
+    path('calculator/', views.calculator, name='calculator'), 
+    path('saveevenodd/', views.saveevenodd, name='saveevenodd'), 
+    path('marksheet/', views.marksheet, name='marksheet'), 
 ]
